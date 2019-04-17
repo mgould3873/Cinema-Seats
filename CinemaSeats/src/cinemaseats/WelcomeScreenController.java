@@ -41,6 +41,7 @@ public class WelcomeScreenController {
         } catch (IOException ex) {
         }
         MovieListController controller = root1.getController();
+        controller.theaterSelected((String)theaterChoiceBox.getValue());
         Scene sc = new Scene(root);
         Stage st = new Stage();
         st.setScene(sc);
@@ -57,6 +58,6 @@ public class WelcomeScreenController {
         //Adding choices to the choiceBox menu
         theaterChoiceBox.getItems().add("Regal Cinema");
         theaterChoiceBox.getItems().add("AMC Theatre");
-        theaterChoiceBox.getItems().add("Cinepolis");
+        theaterChoiceBox.getItems().add("Cinemark Theatre");
     }
 }
