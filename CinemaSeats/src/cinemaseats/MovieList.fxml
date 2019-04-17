@@ -8,15 +8,18 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemaseats.MovieListController">
+<AnchorPane id="AnchorPane" fx:id="movieListAnchorPane" prefHeight="430.0" prefWidth="465.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cinemaseats.MovieListController">
    <children>
-      <ImageView fitHeight="400.0" fitWidth="710.0" layoutX="-278.0">
+      <ImageView fitHeight="430.0" fitWidth="746.0" layoutX="-278.0">
          <image>
             <Image url="@../movielist.jpg" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="43.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The theater you have selected is:" />
-      <Text fx:id="chosenTheater" fill="WHITE" layoutX="217.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fill="WHITE" layoutX="129.0" layoutY="87.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The theater you have selected is:" />
+      <Text fx:id="chosenTheater" fill="WHITE" layoutX="126.0" layoutY="109.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="178.4000244140625">
+         <font>
+            <Font size="18.0" />
+         </font></Text>
       <Text fill="WHITE" layoutX="73.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose a movie from the list below:">
          <font>
             <Font size="18.0" />
@@ -25,7 +28,8 @@
       <ChoiceBox fx:id="movieChoiceBox" layoutX="144.0" layoutY="150.0" prefHeight="0.0" prefWidth="142.0" />
       <Text fill="WHITE" layoutX="93.0" layoutY="235.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The times available for the selected movie are:" />
       <ChoiceBox fx:id="movieTimeChoiceBox" layoutX="144.0" layoutY="247.0" prefHeight="0.0" prefWidth="142.0" />
-      <Button fx:id="backToTheatersButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" text="Go back to theaters" />
-      <Button fx:id="toSeatSelectionButton" layoutX="269.0" layoutY="361.0" mnemonicParsing="false" text="Proceed to seat selection" />
+      <Button fx:id="backToTheatersButton" layoutX="14.0" layoutY="361.0" mnemonicParsing="false" onAction="#backToWelcomeScreen" text="Go back to theaters" />
+      <Button fx:id="toSeatSelectionButton" layoutX="269.0" layoutY="361.0" mnemonicParsing="false" onAction="#toSeatSelection" text="Proceed to seat selection" />
+      <Button layoutX="147.0" layoutY="189.0" mnemonicParsing="false" onAction="#generateMovieTimes" text="Generate Movie Times" />
    </children>
 </AnchorPane>
